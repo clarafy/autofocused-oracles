@@ -6,8 +6,8 @@ This repository is the official implementation of [Autofocused oracles for model
 
 ## Training and Evaluation
 
-Notebooks for running the superconductor design experiments (e.g., Table 1 in the paper) are superconductivity_groundtruth.ipynb and
-superconductivity.ipynb. For the 1-D illustrative example, see toy.ipynb.
+Notebooks for running the superconductor design experiments (e.g., Table 1 in the paper) are '''superconductivity_groundtruth.ipynb''' and
+'''superconductivity.ipynb'''. For the 1-D illustrative example, see toy.ipynb.
 
 ## Pre-trained Models
 
