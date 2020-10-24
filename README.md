@@ -1,8 +1,6 @@
-# AUtofocused oracles for model-based optimization
+# Autofocused oracles for model-based optimization
 
-This repository is the official implementation of [Autofocused oracles for model-based optimization](https://arxiv.org/abs/2006.08052).
-
-C. Fannjiang, J. Listgarten. AUtofocused oracles for model-based optimization. NeurIPS 2020.
+This repository is the official implementation of [Autofocused oracles for model-based optimization](https://arxiv.org/abs/2006.08052), to appear at NeurIPS 2020.
 
 ## Requirements
 
