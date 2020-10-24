@@ -43,8 +43,7 @@ class MultivariateGaussian(SearchModel):
     def sample(self, n_sample: int, seed: int = None) -> np.array:
         np.random.seed(seed)
         X_nxp = np.random.multivariate_normal(self._parameters[0], self._parameters[1], size=n_sample)
-        auxiliary_variable = None
-        return X_nxp, auxiliary_variable
+        return X_nxp
 
     def fit(self, X_nxp: np.array, weights: np.array = None):
         if weights is None:
@@ -82,10 +81,10 @@ class MultivariateGaussian(SearchModel):
     def save(self, filename: str):
         print("Saving to {} using np.savez.".format(filename))
         parameters = self.get_parameters()
-        np.savez(filename, mean=parameters[0], cov=parameters[1])
+        np.savez(filename, mean_d=parameters[0], cov_dxd=parameters[1])
 
     def load(self, filename: str):
         d = np.load(filename)
-        if 'mean' not in d or 'cov' not in d:
+        if 'mean_d' not in d or 'cov_dxd' not in d:
             raise ValueError('File {} is missing either the mean or covariance parameter.'.format(filename))
-        self.set_parameters((d["mean"], d["cov"]))
+        self.set_parameters((d["mean_d"], d["cov_dxd"]))
